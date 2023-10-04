@@ -23,7 +23,7 @@
         "tileManager.ts",
         "order.ts",
         "conveyor.ts",
-        "WorkStation.ts"
+        "workstation.ts"
     ],
     "testFiles": [
         "test.ts"
