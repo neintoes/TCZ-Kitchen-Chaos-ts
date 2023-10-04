@@ -113,6 +113,7 @@ class GameManager {
                 nearbyConveyors[0].data.placeDish(this.currentOrder.plate);
                 return;
             }
+            return;
         }
         // logic for dropping ingredients onto plates or conveyors
         if (nearbyPlates.length > 0) {
