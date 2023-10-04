@@ -1,5 +1,6 @@
 class Conveyor extends BaseSprite {
-    carriedDish: Sprite = null;
+    private carriedDish: Sprite = null;
+    
     constructor(location: tiles.Location) {
         super(assets.image`conveyor`, SpriteKind.Conveyor);
         this.sprite.z = -1;
