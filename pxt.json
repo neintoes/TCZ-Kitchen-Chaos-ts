@@ -19,7 +19,6 @@
         "images.g.ts",
         "tilemap.g.jres",
         "tilemap.g.ts",
-        "UI.ts",
         "tileManager.ts",
         "order.ts",
         "conveyor.ts",

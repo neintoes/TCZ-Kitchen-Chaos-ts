@@ -7,7 +7,12 @@ enum IngredientType {
     Tomato,
     ChoppedTomato
 }
+
+interface iChoppable{
+    isChoppable: boolean;
+}
 // end GH1
+
 
 abstract class Ingredient extends BaseSprite {
     type: IngredientType;
@@ -38,6 +43,7 @@ abstract class ModifiableIngredient extends Ingredient {
         }
     }
 }
+
 // end GH1
 
 class IngredientSpawner extends BaseSprite {
@@ -71,7 +77,8 @@ class Bread extends Ingredient {
 }
 
 // GH1
-class Lettuce extends ModifiableIngredient {
+class Lettuce extends ModifiableIngredient implements iChoppable {
+    isChoppable: boolean = true;
     constructor() {
         super(assets.image`lettuce`, assets.image`chopped lettuce`, IngredientType.Lettuce, IngredientType.ChoppedLettuce);
     }
@@ -85,7 +92,8 @@ class Meat extends Ingredient {
 }
 
 // GH1
-class Tomato extends ModifiableIngredient {
+class Tomato extends ModifiableIngredient implements iChoppable{
+    isChoppable: boolean = true;
     constructor() {
         super(assets.image`tomato`, assets.image`chopped tomato`, IngredientType.Tomato, IngredientType.ChoppedTomato);
     }
