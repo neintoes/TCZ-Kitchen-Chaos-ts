@@ -4,8 +4,12 @@ namespace SpriteKind {
     export const Icon: number = SpriteKind.create();
     export const Conveyor: number = SpriteKind.create();
     export const UI: number = SpriteKind.create();
+    // GH1
+    export const WorkStation = SpriteKind.create();
+    // end GH1
 }
 
+// GH1
 namespace helperFunctions {
     export function ingredientSpriteFromType(ingredientType: IngredientType): Sprite {
         let imageAsset;
@@ -16,11 +20,17 @@ namespace helperFunctions {
             case IngredientType.Lettuce:
                 imageAsset = assets.image`lettuce`;
                 break;
+            case IngredientType.ChoppedLettuce:
+                imageAsset = assets.image`chopped lettuce`;
+                break;
             case IngredientType.Meat:
                 imageAsset = assets.image`meat`;
                 break;
             case IngredientType.Tomato:
                 imageAsset = assets.image`tomato`;
+                break;
+            case IngredientType.ChoppedTomato:
+                imageAsset = assets.image`chopped tomato`;
                 break;
             default:
                 throw "Unknown IngredientType";
@@ -34,15 +44,20 @@ namespace helperFunctions {
                 return assets.image`bread`;
             case IngredientType.Lettuce:
                 return assets.image`lettuce`;
+            case IngredientType.ChoppedLettuce:
+                return assets.image`chopped lettuce`;
             case IngredientType.Meat:
                 return assets.image`meat`;
             case IngredientType.Tomato:
                 return assets.image`tomato`;
+            case IngredientType.ChoppedTomato:
+                return assets.image`chopped tomato`;
             default:
                 throw "Unknown IngredientType";
         }
     }
 }
+// end GH1
 
 class GameManager {
     public playerSprite: PlayerSprite;
@@ -80,9 +95,13 @@ class GameManager {
             }
         });
 
+        // GH1
         controller.B.onEvent(ControllerButtonEvent.Pressed, function (): void {
-            this.playerSprite.dropItem();
+            if (this.playerSprite.heldItem) {
+                this.handleWorkStationLogic();
+            }
         });
+        // end GH1
     }
 
     private handleDropLogic(nearbyPlates: Sprite[], nearbyIngredients: Sprite[], nearbyIcons: Sprite[]): void {
@@ -104,7 +123,7 @@ class GameManager {
             } else {
                 this.playerSprite.dropItem();
             }
-        } else if(nearbyConveyors.length > 0) {
+        } else if (nearbyConveyors.length > 0) {
             nearbyConveyors[0].data.placeDish(this.playerSprite.heldItem);
             this.playerSprite.dropItem();
         } else {
@@ -122,6 +141,16 @@ class GameManager {
             this.playerSprite.pickupItem(ingredient.sprite);
         }
     }
+
+    // GH1
+    // returns true if a workstation has been interacted with
+    private handleWorkStationLogic(): void {
+        let nearbyWorkStations = spriteutils.getSpritesWithin(SpriteKind.WorkStation, 20, this.playerSprite.sprite);
+        if (nearbyWorkStations.length > 0) {
+            nearbyWorkStations[0].data.interact(this.playerSprite.heldItem)
+        }
+    }
+    // end GH1
 
     private initialiseGameLoop(): void {
         this.currentOrder = new Order();

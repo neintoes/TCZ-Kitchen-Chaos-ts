@@ -10,11 +10,13 @@ namespace myTiles {
     export const tile3 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile4 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile5 = image.ofBuffer(hex``);
 
     helpers._registerFactory("tilemap", function(name: string) {
         switch(helpers.stringTrim(name)) {
             case "kitchen":
-            case "level1":return tiles.createTilemap(hex`0a0008000000000000000000000005030303030303030305010202020202020202040102020202020202020301020202020202020203010202020202020202040503030303030303030506080808080808080807`, img`
+            case "level1":return tiles.createTilemap(hex`0a0008000000000000000000000005030303030303030305010202020202020202040102020202020202020301020202020202020203010202020202020202040509030303030303030506080808080808080807`, img`
 . . . . . . . . . . 
 2 2 2 2 2 2 2 2 2 2 
 2 . . . . . . . . 2 
@@ -23,7 +25,7 @@ namespace myTiles {
 2 . . . . . . . . 2 
 2 2 2 2 2 2 2 2 2 2 
 . . . . . . . . . . 
-`, [myTiles.transparency16,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,sprites.dungeon.floorDark2,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundNorth], TileScale.Sixteen);
+`, [myTiles.transparency16,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,sprites.dungeon.floorDark2,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundNorth,myTiles.tile5], TileScale.Sixteen);
         }
         return null;
     })
@@ -39,6 +41,8 @@ namespace myTiles {
             case "tile3":return tile3;
             case "conveyor spawn":
             case "tile4":return tile4;
+            case "workstation":
+            case "tile5":return tile5;
         }
         return null;
     })

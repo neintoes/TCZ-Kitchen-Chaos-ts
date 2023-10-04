@@ -215,6 +215,63 @@ b b b c c c b b b c c c b b b c
 b b b c c c b b b c c c b b b c 
 b b b c c c b b b c c c b b b c 
 `;
+            case "image10":
+            case "chopping board":return img`
+. . . . . . . . . . . . . . . . 
+. . e e e e e e e e e e e e . . 
+. e e e e e e e e e e e e e e . 
+. e e e e e e e e e e e e d e . 
+. e e e e e e e e e e e e d e . 
+. e e e e e e e e e e e e d e . 
+. e e e e e e e e e e e e e e . 
+. e e e e e e e e e e e . . e . 
+. e e e e e e e e e e e . . e . 
+. e e e e e e e e e e e e e e . 
+. e e e e e e e e e e e e d e . 
+. e e e e e e e e e e e e d e . 
+. e e e e e e e e e e e e d e . 
+. e e e e e e e e e e e e e e . 
+. . e e e e e e e e e e e e . . 
+. . . . . . . . . . . . . . . . 
+`;
+            case "image12":
+            case "chopped tomato":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f . f f . . . . . . 
+. . . . . . f . 7 f f . . . . . 
+. . . . f f f . 7 7 f f . . . . 
+. . f . 2 2 f . f f f 2 . f . . 
+. f 2 . 2 2 2 . 2 2 2 2 . 2 f . 
+f 2 2 . 2 2 2 . 2 2 3 1 . 2 2 f 
+f 2 2 . 2 2 2 . 2 2 2 3 . 2 2 f 
+f 2 2 . 2 2 2 . 2 2 2 2 . 2 2 f 
+f 2 2 . 2 2 2 . 2 2 2 2 . 2 2 f 
+f 2 2 . 2 2 2 . 2 2 2 2 . 2 2 f 
+. f 2 . 2 2 2 . 2 2 2 2 . 2 f . 
+. . f . 2 2 2 . 2 2 2 2 . f . . 
+. . . . f f f . f f f f . . . . 
+. . . . . . . . . . . . . . . . 
+`;
+            case "image11":
+            case "chopped lettuce":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f . f . . . . . . 
+. . . . f f 7 7 . 7 f f . . . . 
+. . f . 1 7 7 7 . 7 7 7 . f . . 
+. f 7 . f 1 1 7 . 7 7 1 . 1 f . 
+f 7 7 . 7 f f 1 . 7 1 f . f 7 f 
+f 1 7 . 7 7 7 f . 1 f 7 . 7 7 f 
+f f 1 . 7 7 7 7 . f 7 7 . 7 1 f 
+f 7 f . 1 7 7 7 . f 1 7 . 1 f f 
+f 7 7 . f 7 7 7 . 7 f 1 . f 7 f 
+f 7 7 . f 7 7 7 . 7 7 f . 7 7 f 
+. f 7 . 7 f 7 7 . 7 f 7 . 7 f . 
+. . f . f 7 7 7 . f 7 7 . f . . 
+. . . . . f f f . f f f . . . . 
+. . . . . . . . . . . . . . . . 
+`;
         }
         return null;
     })

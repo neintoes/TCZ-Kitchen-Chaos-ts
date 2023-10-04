@@ -44,6 +44,21 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "conveyor"
     },
+    "image10": {
+        "data": "hwQQABAAAAAAAAAAAAAAAADu7u7u7u4A4O7u7u7u7g7g7u7u7u7uDuDu7u7u7u4O4O7u7u7u7g7g7u7u7u7uDuDu7u7u7u4O4O7u7u7u7g7g7u7u7u7uDuDu7u7u7u4O4O7u7u7u7g7g7u4O4O7uDuDe3Q7g3e0OAO7u7u7u7gAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "chopping board"
+    },
+    "image12": {
+        "data": "hwQQABAAAAAAAADw//8AAAAAAC8iIg8AAADwIiIi8gAAAAAAAAAAAAAALyIiIiIPAAAvIiIiIg8A//8iIiIiDwAAAAAAAAAAAH/3IiIiIg8A//ciIiIiDwDw/zIiIiIPAAAvEiMiIg8AAAAAAAAAAAAA8CIiIvIAAAAALyIiDwAAAADw//8AAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "chopped tomato"
+    },
+    "image11": {
+        "data": "hwQQABAAAAAAAAD///8AAAAA8Bd/dw8AAAB/d/F39wAAAAAAAAAAAADw8XcX//cAAPAXf3d3fw8Afxd/d3d3DwB/d/F3d3cPAAAAAAAAAAAAf3cX/3f3DwDwd/EXf38PAPAXf3fxdw8AAAAAAAAAAAAAH38Xf/cAAADwd/F3DwAAAAD///8AAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "chopped lettuce"
+    },
     "anim1": {
         "namespace": "myAnimations",
         "id": "anim1",

@@ -13,10 +13,17 @@ class Order {
     private initialiseRecipe(): void {
         this.recipe = [IngredientType.Bread, IngredientType.Meat];
         if (randint(1, 2) == 1) {
-            this.recipe.push(IngredientType.Lettuce);
-        }
-        if (randint(1, 2) == 1) {
-            this.recipe.push(IngredientType.Tomato);
+            if(randint(1, 2) == 1) {
+                this.recipe.push(IngredientType.Lettuce);
+            } else {
+                this.recipe.push(IngredientType.ChoppedLettuce);
+            }
+        } else {
+            if (randint(1, 2) == 1) {
+                this.recipe.push(IngredientType.Tomato);
+            } else {
+                this.recipe.push(IngredientType.ChoppedTomato);
+            }
         }
     }
 

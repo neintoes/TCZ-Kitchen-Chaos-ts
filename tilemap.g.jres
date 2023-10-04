@@ -28,10 +28,16 @@
         "tilemapTile": true,
         "displayName": "conveyor spawn"
     },
+    "tile5": {
+        "data": "hwQQABAAAAAdERERERERsdHd3d3d3d290d3d3d3d3b3R3d3d3d3dvdHd3d3d3d290d3d3d3d3b3R3d3d3d3dvdHd3d3d3d290d3d3d3d3b3R3d3d3d3dvdHd3d3d3d290d3d3d3d3b3R3d3d3d3dvdHd3d3d3d290d3d3d3d3b27u7u7u7u7uw==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "workstation"
+    },
     "level1": {
         "id": "level1",
         "mimeType": "application/mkcd-tilemap",
-        "data": "MTAwYTAwMDgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDUwMzAzMDMwMzAzMDMwMzAzMDUwMTAyMDIwMjAyMDIwMjAyMDIwNDAxMDIwMjAyMDIwMjAyMDIwMjAzMDEwMjAyMDIwMjAyMDIwMjAyMDMwMTAyMDIwMjAyMDIwMjAyMDIwNDA1MDMwMzAzMDMwMzAzMDMwMzA1MDYwODA4MDgwODA4MDgwODA4MDcwMDAwMDAwMDAwMjIyMjIyMjIyMjAyMDAwMDAwMjAwMjAwMDAwMDIwMDIwMDAwMDAyMDAyMDAwMDAwMjAyMjIyMjIyMjIyMDAwMDAwMDAwMA==",
+        "data": "MTAwYTAwMDgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDUwMzAzMDMwMzAzMDMwMzAzMDUwMTAyMDIwMjAyMDIwMjAyMDIwNDAxMDIwMjAyMDIwMjAyMDIwMjAzMDEwMjAyMDIwMjAyMDIwMjAyMDMwMTAyMDIwMjAyMDIwMjAyMDIwNDA1MDkwMzAzMDMwMzAzMDMwMzA1MDYwODA4MDgwODA4MDgwODA4MDcwMDAwMDAwMDAwMjIyMjIyMjIyMjAyMDAwMDAwMjAwMjAwMDAwMDIwMDIwMDAwMDAyMDAyMDAwMDAwMjAyMjIyMjIyMjIyMDAwMDAwMDAwMA==",
         "tileset": [
             "myTiles.transparency16",
             "myTiles.tile1",
@@ -41,7 +47,8 @@
             "sprites.dungeon.floorDark2",
             "sprites.dungeon.darkGroundNorthWest0",
             "sprites.dungeon.darkGroundNorthEast0",
-            "sprites.dungeon.darkGroundNorth"
+            "sprites.dungeon.darkGroundNorth",
+            "myTiles.tile5"
         ],
         "displayName": "kitchen"
     },

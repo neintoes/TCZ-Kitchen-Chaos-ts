@@ -13,6 +13,7 @@ class TileManager {
         tiles.setCurrentTilemap(this.tileMap);
         this.placePlayer();
         this.placeConveyors();
+        this.placeWorkStations();
     }
 
     private placePlayer(): void {
@@ -31,4 +32,12 @@ class TileManager {
             new Conveyor(location);
         });
     }
+
+    // GH1
+    private placeWorkStations(): void {
+        // chopping board
+        let choppingBoard = new ChoppingBoard();
+        tiles.placeOnRandomTile(choppingBoard.sprite, assets.tile`workstation`);
+    }
+    // end GH1
 }

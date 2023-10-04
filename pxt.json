@@ -22,7 +22,8 @@
         "UI.ts",
         "tileManager.ts",
         "order.ts",
-        "conveyor.ts"
+        "conveyor.ts",
+        "WorkStation.ts"
     ],
     "testFiles": [
         "test.ts"

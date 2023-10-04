@@ -1,17 +1,44 @@
+// GH1
 enum IngredientType {
     Bread = 0,
     Lettuce,
+    ChoppedLettuce,
     Meat,
-    Tomato
+    Tomato,
+    ChoppedTomato
 }
+// end GH1
 
 abstract class Ingredient extends BaseSprite {
-    constructor(image: Image) {
+    type: IngredientType;
+    constructor(image: Image, type: IngredientType) {
         super(image, SpriteKind.Ingredient);
+        this.type = type;
         this.sprite.scale = 0.75;
         this.sprite.setFlag(SpriteFlag.AutoDestroy, true);
     }
 }
+
+// GH1
+abstract class ModifiableIngredient extends Ingredient {
+    altered: boolean = false;
+    alteredImage: Image;
+    alteredType: IngredientType;
+    constructor(image: Image, alteredImage: Image, type: IngredientType, alteredType: IngredientType) {
+        super(image, type);
+        this.alteredImage = alteredImage;
+        this.alteredType = alteredType;
+    }
+
+    public alterIngredient(): void {
+        if (!this.altered) {
+            this.altered = true;
+            this.sprite.setImage(this.alteredImage);
+            this.type = this.alteredType;
+        }
+    }
+}
+// end GH1
 
 class IngredientSpawner extends BaseSprite {
     type: IngredientType;
@@ -38,29 +65,29 @@ class IngredientSpawner extends BaseSprite {
 }
 
 class Bread extends Ingredient {
-    type: IngredientType = IngredientType.Bread
     constructor() {
-        super(assets.image`bread`);
+    super(assets.image`bread`, IngredientType.Bread);
     }
 }
 
-class Lettuce extends Ingredient {
-    type: IngredientType = IngredientType.Lettuce
+// GH1
+class Lettuce extends ModifiableIngredient {
     constructor() {
-        super(assets.image`lettuce`);
+        super(assets.image`lettuce`, assets.image`chopped lettuce`, IngredientType.Lettuce, IngredientType.ChoppedLettuce);
     }
 }
+// end GH1
 
 class Meat extends Ingredient {
-    type: IngredientType = IngredientType.Meat
     constructor() {
-        super(assets.image`meat`);
+        super(assets.image`meat`, IngredientType.Meat);
     }
 }
 
-class Tomato extends Ingredient {
-    type: IngredientType = IngredientType.Tomato
+// GH1
+class Tomato extends ModifiableIngredient {
     constructor() {
-        super(assets.image`tomato`);
+        super(assets.image`tomato`, assets.image`chopped tomato`, IngredientType.Tomato, IngredientType.ChoppedTomato);
     }
 }
+// end GH1
