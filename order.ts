@@ -45,19 +45,19 @@ class Order {
     }
 
     public checkIngredients(type: IngredientType): boolean {
-        console.log(this.recipe[this.recipe.length-1])
-        console.log(type)
-        if(this.recipe[this.recipe.length - 1] == type) {
-            this.recipe.pop();
-            if(this.recipe.length < 1) {
-                this.finishRecipe();
+        for (let i: number = 0; i < this.recipe.length; i++) {
+            if (this.recipe[i] == type) {
+                this.recipe.removeAt(i);
+                if (this.recipe.length < 1) {
+                    this.finishRecipe();
+                }
+                sprites.allOfKind(SpriteKind.UI).forEach(function(icon: Sprite): void {
+                    icon.destroy();
+                });
+                this.displayOrder();
+                return true;
             }
-            sprites.allOfKind(SpriteKind.UI).forEach(function(icon: Sprite): void {
-                icon.destroy();
-            });
-            this.displayOrder();
-            return true;
-        } 
+        }
         return false;
     }
 
